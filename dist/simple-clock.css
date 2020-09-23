@@ -1,0 +1,441 @@
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+  height: 100%;
+}
+
+body {
+  font-size: 1.6em;
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* selectbox */
+.select-wrapper {
+  filter: drop-shadow(0px 10px 5px black);
+  transform: translateZ(0);
+  border: dotted;
+  border-radius: 16px;
+  width: 20rem;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.selected-item {
+  text-align: center;
+  width: 100%;
+}
+
+.custom-select {
+  display: none;
+  width: 100%;
+  list-style-type: none;
+  padding-inline-start: 0;
+  text-align: center;
+  margin: 0;
+}
+/* selectbox */
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* clock frame */
+.clock-container {
+  margin: 5vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.l-dial {
+  position: relative;
+  display: block;
+  height: 70vh;
+  width: 70vh;
+  max-width: 70vw;
+  max-height: 70vw;
+}
+
+.l-hands {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  left: 50%;
+  transform-origin: left center;
+}
+
+.hand.s {
+  width: 35%;
+}
+
+.hand.m {
+  width: 35%;
+}
+
+.hand.h {
+  width: 24%;
+}
+
+.l-marks {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+}
+
+.mark {
+  position: absolute;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transform-origin: left center;
+}
+/* clock frame */
+
+/* default theme */
+.default-container {
+  background-color: rgb(255, 255, 255);
+}
+
+.default-dial {
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px rgb(145, 145, 145),
+    0px 10px 15px rgb(156, 156, 156),
+    0px 15px 20px rgb(173, 173, 173),
+    0px 20px 25px rgb(196, 194, 194),
+    0px 25px 30px rgb(211, 210, 210);
+  background-color: white;
+}
+
+.default-hands {
+  filter: drop-shadow(0px 10px 5px rgb(109, 109, 109))
+    drop-shadow(0px 15px 10px rgb(155, 155, 155));
+  transform: translateZ(0);
+}
+
+.default-hand {
+  height: 1%;
+  background-color: black;
+}
+
+.default-hand.s {
+  height: 0.5%;
+  background-color: rgb(165, 55, 55);
+}
+
+.default-mark {
+  width: 48%;
+  height: 1%;
+}
+
+.default-mark>div {
+  width: 5%;
+  height: 100%;
+  background-color: black;
+}
+
+.default-center {
+  height: 2.5%;
+  width: 2.5%;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 2;
+}
+/* default theme */
+
+/* default square theme */
+.default-square-container {
+  background-color: rgb(255, 255, 255);
+}
+
+.default-square-dial {
+  border-radius: 25%;
+  box-shadow: 0px 5px 10px rgb(145, 145, 145),
+    0px 10px 15px rgb(156, 156, 156),
+    0px 15px 20px rgb(173, 173, 173),
+    0px 20px 25px rgb(196, 194, 194),
+    0px 25px 30px rgb(211, 210, 210);
+  background-color: white;
+}
+
+.default-square-hands {
+  filter: drop-shadow(0px 10px 5px rgb(109, 109, 109))
+    drop-shadow(0px 15px 10px rgb(155, 155, 155));
+  transform: translateZ(0);
+}
+
+.default-square-hand {
+  height: 1%;
+  background-color: black;
+}
+
+.default-square-hand.s {
+  height: 0.5%;
+  background-color: rgb(165, 55, 55);
+}
+
+.default-square-mark {
+  width: 48%;
+  height: 1%;
+}
+
+.default-square-mark>div {
+  width: 5%;
+  height: 100%;
+  background-color: black;
+}
+
+.default-square-center {
+  height: 2.5%;
+  width: 2.5%;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 2;
+}
+/* default theme */
+
+/* neumorphism theme */
+.neumorphism-container {
+  background-color: rgb(158,177,189);
+}
+
+.neumorphism-dial {
+  border-radius: 50%;
+  background-color: rgb(158,177,189);
+  filter: drop-shadow(10px 10px 10px rgba(0,31,58, 0.7))
+          drop-shadow(-10px -10px 10px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-hands {
+  filter: drop-shadow(5px 5px 5px rgba(0,31,58, 0.7))
+          drop-shadow(-5px -5px 5px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-hand {
+  height: 2%;
+}
+
+.neumorphism-hand.s {
+  height: 5%;
+}
+
+.neumorphism-hand.s>div {
+  width: 14.3%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(158,177,189) ;
+}
+
+.neumorphism-hand>div {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(158,177,189) ;
+}
+
+.neumorphism-mark {
+  width: 48%;
+  height: 0.5%;
+}
+.neumorphism-mark>div {
+  width: 5%;
+  height: 100%;
+  background-color: rgba(211,228,211, 0.5);
+}
+/* neumorphism theme */
+
+/* neumorphism theme */
+.neumorphism2-container {
+  background-color: rgb(158,177,189);
+}
+
+.neumorphism2-dial {
+  border-radius: 50%;
+  background-color: rgb(158,177,189);
+  filter: drop-shadow(10px 10px 10px rgba(0,31,58, 0.7))
+          drop-shadow(-10px -10px 10px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism2-hands {
+  filter: drop-shadow(5px 5px 5px rgba(0,31,58, 0.7))
+          drop-shadow(-5px -5px 5px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism2-hand {
+  height: 2%;
+}
+
+.neumorphism2-hand.s {
+  height: 5%;
+}
+
+.neumorphism2-hand.s>div {
+  width: 14.3%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(158,177,189) ;
+}
+
+.neumorphism2-hand>div {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(158,177,189) ;
+}
+/* neumorphism theme */
+
+/* neumorphism aquare theme */
+.neumorphism-square-container {
+  background-color: rgb(158,177,189);
+}
+
+.neumorphism-square-dial {
+  border-radius: 25%;
+  background-color: rgb(158,177,189);
+  filter: drop-shadow(10px 10px 10px rgba(0,31,58, 0.7))
+          drop-shadow(-10px -10px 10px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-square-hands {
+  filter: drop-shadow(5px 5px 5px rgba(0,31,58, 0.7))
+          drop-shadow(-5px -5px 5px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-square-hand {
+  height: 2%;
+}
+
+.neumorphism-square-hand.s {
+  height: 5%;
+}
+
+.neumorphism-square-hand.s>div {
+  width: 14.3%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(158,177,189) ;
+}
+
+.neumorphism-square-hand>div {
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgb(158,177,189) ;
+}
+
+.neumorphism-square-mark {
+  width: 48%;
+  height: 0.5%;
+}
+.neumorphism-square-mark>div {
+  width: 5%;
+  height: 100%;
+  background-color: rgba(211,228,211, 0.5);
+}
+/* neumorphism square theme */
+
+/* neumorphism square2 theme */
+.neumorphism-square2-container {
+  background-color: rgb(158,177,189);
+}
+
+.neumorphism-square2-dial {
+  border-radius: 5%;
+  background-color: rgb(158,177,189);
+  filter: drop-shadow(10px 10px 10px rgba(0,31,58, 0.7))
+          drop-shadow(-10px -10px 10px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-square2-hands {
+  filter: drop-shadow(5px 5px 5px rgba(0,31,58, 0.7))
+          drop-shadow(-5px -5px 5px rgba(237,250,255, 0.7));
+  transform: translateZ(0);
+}
+
+.neumorphism-square2-hand {
+  height: 2%;
+}
+
+.neumorphism-square2-hand.s {
+  height: 5%;
+}
+
+.neumorphism-square2-hand.s>div {
+  width: 14.3%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(158,177,189);
+}
+
+.neumorphism-square2-hand>div {
+  width: 85%;
+  height: 100%;
+  background-color: rgb(158,177,189);
+}
+/* neumorphism aquare2 theme */
+
+/* dotted theme */
+.dotted-container {
+  background-color: rgb(171, 214, 214);
+}
+
+.dotted-dial {
+  background-color: transparent;
+  border-radius: 50%;
+  border: dotted rgb(63, 80, 80);
+  filter: drop-shadow(10px 10px 10px black);
+  transform: translateZ(0);
+}
+
+.dotted-hands {
+  background-color: transparent;
+}
+
+.dotted-hand {
+  height: 1.5%;
+}
+
+.dotted-hand.s {
+  height: .5%;
+}
+
+.dotted-hand>div {
+  width: 88%;
+  height: 100%;
+  border: dotted rgb(63, 80, 80);
+  background-color: transparent;
+}
+/* dotted theme */
